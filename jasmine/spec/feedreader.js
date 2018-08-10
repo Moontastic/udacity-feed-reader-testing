@@ -69,11 +69,7 @@ $(function() {
     describe('Initial Entries', function() {
 
         // beforeEach allows for use of asynchronous loadFeed().
-        beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
-        });
+        beforeEach(done => loadFeed(0, done));
 
         // tests that there is at least one entry in feed.
         it('should be called and contain at least one feed.', function() {
